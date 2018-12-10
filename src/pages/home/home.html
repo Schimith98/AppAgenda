@@ -1,18 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Eventos
-      <button ion-button icon-only (click)="openCadastrarEvento()">
-        <ion-icon name="add-circle"></ion-icon>
-      </button>
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Próximos Eventos:</h2>
-  <ion-list>
-    
-  </ion-list>
+<ion-content padding id="body">
+  <h1 id="title">Agenda de Festas e Eventos</h1>
 
+  <ion-footer class="footer">
+    <button ion-button icon-only clear id="buttonCadastrarPage" (click)="openCadastrarEvento()">
+      <ion-icon name="add-circle"> Agendar Evento</ion-icon>
+    </button>
+    <br>
+    <button ion-button icon-only clear id="buttonListarPage" (click)="openListaEventos()">
+      <ion-icon name="paper"> Lista de Eventos</ion-icon>
+    </button>
+  </ion-footer>
 </ion-content>

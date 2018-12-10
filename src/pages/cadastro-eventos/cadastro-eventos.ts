@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -10,13 +11,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CadastroEventosPage {
   evento = {
     data: "",
+    hora: "",
     cliente: "",
     tema: "",
     local: "",
     valor: "",
     descricao: ""
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -24,6 +27,6 @@ export class CadastroEventosPage {
   }
 
   agendarEvento(evento){
-    console.log(evento);
+    this.navCtrl.pop(evento);
   }
 }

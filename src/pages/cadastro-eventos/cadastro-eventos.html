@@ -1,9 +1,3 @@
-<!--
-  Generated template for the CadastroEventosPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,37 +7,42 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-item>
+<ion-content padding id="body">
+  <ion-item class="lista"> 
     <ion-label stacked>Data</ion-label>
     <ion-input type="date" [(ngModel)]="evento.data"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item class="lista">
+    <ion-label floating>Horário</ion-label>
+    <ion-input type="text" [(ngModel)]="evento.hora"></ion-input>
+  </ion-item>
+
+  <ion-item class="lista">
     <ion-label floating>Cliente</ion-label>
     <ion-input type="text" [(ngModel)]="evento.cliente"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item class="lista">
     <ion-label floating>Tema</ion-label>
     <ion-input type="text" [(ngModel)]="evento.tema"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item class="lista">
     <ion-label floating>Local</ion-label>
     <ion-input type="text" [(ngModel)]="evento.local"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item class="lista">
     <ion-label floating>Valor</ion-label>
     <ion-input type="number" [(ngModel)]="evento.valor"></ion-input>
   </ion-item>
 
-  <ion-item>
-      <ion-label floating>Descrição</ion-label>
-      <ion-input type="text" [(ngModel)]="evento.descricao"></ion-input>
+  <ion-item class="lista">
+    <ion-label floating>Descrição</ion-label>
+    <ion-input type="text" [(ngModel)]="evento.descricao"></ion-input>
   </ion-item>
   <br>
-  <button ion-button (click)="agendarEvento(evento)">Agendar</button>
-
+  <button class="lista" ion-button (click)="agendarEvento(evento)">Agendar</button>
+  <br>
 </ion-content>
