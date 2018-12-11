@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the ListaEventosPage page.
@@ -16,11 +16,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ListaEventosPage {
  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaEventosPage');
+  }
+
+  presentToast() {
+    const toast = this.toastCtrl.create({
+      message: 'O evento NÃO foi excluido',
+      duration: 3000,
+    });
+    toast.present();
+  }
+
+  removerEvento(){
+    this.presentToast();
   }
 
 }

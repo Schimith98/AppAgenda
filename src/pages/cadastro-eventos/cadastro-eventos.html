@@ -14,13 +14,18 @@
   </ion-item>
 
   <ion-item class="lista">
-    <ion-label floating>Horário</ion-label>
-    <ion-input type="text" [(ngModel)]="evento.hora"></ion-input>
+    <ion-label stacked>Horário</ion-label>
+    <ion-input type="time" [(ngModel)]="evento.hora"></ion-input>
   </ion-item>
 
   <ion-item class="lista">
     <ion-label floating>Cliente</ion-label>
     <ion-input type="text" [(ngModel)]="evento.cliente"></ion-input>
+  </ion-item>
+
+  <ion-item class="lista">
+    <ion-label floating>Telefone</ion-label>
+    <ion-input type="tel" [(ngModel)]="evento.tel"></ion-input>
   </ion-item>
 
   <ion-item class="lista">
@@ -43,6 +48,6 @@
     <ion-input type="text" [(ngModel)]="evento.descricao"></ion-input>
   </ion-item>
   <br>
-  <button class="lista" ion-button (click)="agendarEvento(evento)">Agendar</button>
+  <button class="lista" ion-button (click)="agendarEvento()">Agendar</button>
   <br>
 </ion-content>

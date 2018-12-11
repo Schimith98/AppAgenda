@@ -2,12 +2,18 @@ page-cadastro-eventos {
     
     #body{
         text-align: center;
-        background-image: url(/assets/imgs/wallpaper2.jpeg);
+        background-image: url(/assets/imgs/wallpaper3.jpeg);
         background-repeat: no-repeat;
-        background-size: initial;
+        background-color: black;      
     }
     .lista{
-        background-color: rgba(255, 255, 255, 0.397);
+        background-color: rgba(255, 255, 255, 0.87);
         color: black;
     }
+    
+    .lista ion-label{
+        color: black;
+        $label-md-text-color: black;
+    }
+
 }
